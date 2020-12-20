@@ -1,0 +1,23 @@
+{
+  "name": "this-african-girl-codes",
+  "version": "1.0.0",
+  "description": "A website for a hair company which produces organic hair products",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "devserver": "live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fedozie/this-african-girl-codes.git"
+  },
+  "author": "Edozie Onyeanusi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fedozie/this-african-girl-codes/issues"
+  },
+  "homepage": "https://github.com/Fedozie/this-african-girl-codes#readme",
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  }
+}
