@@ -14,6 +14,10 @@
     cursor: pointer;
     transition: width .5s ease-in-out;
     font-size: 2rem;
+
+    span{
+        
+    }
 }
 
 .sidebar{
@@ -24,7 +28,7 @@
     height: 90%;
     z-index: 1111;
     transition: transform .5s ease-in-out;
-    transform: translateX(-27rem); //Allows for the sidebar to be hidden
+    transform: translateX(-29rem); //Allows for the sidebar to be hidden
 
     & ul{
         padding: 0;
@@ -75,4 +79,14 @@
 
 #checkbox:checked + .hamburger span{
     display: inline;
+}
+
+.product{
+    width: 30%;
+    text-align: center;
+
+    &__img{
+        width: 100%;
+        object-fit: contain;
+    }
 }
