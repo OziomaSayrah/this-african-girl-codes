@@ -5,6 +5,7 @@
 }
 
 *, *::before, *::after{
+    
     box-sizing: inherit;
 }
 
@@ -14,5 +15,7 @@ html{
 }
 
 body{
-    padding: 0 1.5rem;
+    background-color: #077c0d;
+    //padding: 0 1.5rem;
+    
 }

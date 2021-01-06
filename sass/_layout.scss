@@ -4,7 +4,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
 
     &__head{
         display: flex;
@@ -28,10 +27,11 @@
                 position: relative;
                 padding: .5rem;
                 padding-bottom: 3px;
+                color: black;
             }
 
             &::before{
-                background: black;
+                background: #5EFF66;
                 content: '';
                 position: absolute;
                 width: 100%;
@@ -56,10 +56,11 @@
                 position: relative;
                 padding: .5rem;
                 padding-bottom: 3px;
+                color: black;
             }
 
             &::before{
-                background: black;
+                background: #5EFF66;
                 content: '';
                 position: absolute;
                 width: 100%;
@@ -79,18 +80,25 @@
         }
     }
 }
+.container{
+    margin: 0;
+    padding: 0;
+}
 
 .content{
 
     &__products{
+        background-color: #077c0d;
         display: flex;
         justify-content: space-around;
         align-items: center;
-        padding-bottom: 2rem;
+        padding: 2rem 0;
+        
     }
 }
 
 .row{
+    
     height: 85vh;
     width: var(--grid-width);
     display: flex;
@@ -110,7 +118,7 @@
 
 .footer{
     color: white;
-    background-color: black;
+    background-color: #077c0d;
     display: grid;
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(4, 1fr);
@@ -132,6 +140,7 @@
         align-items: center;
         text-decoration: none;
         color: white;
+        position: relative;
 
         p{
           margin-left: 1rem;
@@ -143,10 +152,9 @@
       height: 2rem;
       width: 2rem;
 
-      
-
-      &--1{
-
+      &--1 {
+        
+       
       }
 
       &--2{
@@ -160,5 +168,51 @@
       &--4{
 
       }
+  }
+
+  &__link--1{
+
+    &:hover > svg{
+        fill: hsl(220, 54%, 55%);
+    }
+
+    &:hover > p{
+        color: hsl(220, 54%, 55%);
+    }
+  }
+
+  &__link--2{
+
+    &:hover > svg{
+        fill: hsl(203, 89%, 53%);
+    }
+
+    &:hover > p{
+        color: hsl(203, 89%, 53%);
+    }
+  }
+
+  &__link--3{
+
+    &:hover > svg{
+        fill: #FF0000;
+    }
+
+    &:hover > p{
+        color: #FF0000;
+    }
+  }
+
+  &__link--4{
+
+    &:hover > svg{
+        fill: url(#gradient);
+    }
+
+    &:hover > p{
+        background: linear-gradient(to right, #405DE6, #5B51D8, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, 	#FCAF45, #FFDC80);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
   }
 }
