@@ -1,0 +1,117 @@
+.checkbox, .hamburger span{
+    //Hide the checkbox and "Menu" word in the button
+    display: none;
+}
+
+.hamburger{
+    //Hamburger icon and its background
+    display: block;
+    background-color: var(--secondary-colour);
+    color: var(--primary-colour);
+    width: 5.5rem;
+    line-height: 5rem;
+    padding: 0 2rem;
+    cursor: pointer;
+    transition: width .5s ease-in-out;
+    font-size: 2rem;
+
+    span{
+        
+    }
+}
+
+.sidebar{
+    //The whole of the sidebar
+    background-color: hsl(218, 9%, 18%);
+    position: fixed;
+    width: 25rem;
+    height: 90%;
+    z-index: 1111;
+    transition: transform .5s ease-in-out;
+    transform: translateX(-29rem); //Allows for the sidebar to be hidden
+
+    & ul{
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+
+        & a{
+            //Link Elements
+            position: relative;
+            text-decoration: none;
+            display: block;
+            background-color: transparent;
+            color: hsl(277, 6%, 73%);
+            padding: 1.5rem 2rem;
+            font-size: 2rem;
+
+            &:hover{
+                background-color: hsl(222, 19%, 11%);
+                color: var(--white);
+
+                &::before{
+                    position: absolute;
+                    content: '';
+                    top: 0;
+                    left: 0;
+                    width: .5rem;
+                    height: 100%;
+                    background-color: var(--secondary-colour);
+                }
+            }
+        }
+    }
+}
+
+.fa{
+    //The Icon element
+    margin-right: 1.5rem;
+}
+
+#checkbox:checked ~ .sidebar{
+    transform: translateX(0);
+}
+
+#checkbox:checked + .hamburger{
+    width: 25rem;
+    padding: 0 2rem;
+}
+
+#checkbox:checked + .hamburger span{
+    display: inline;
+}
+
+.product{
+    width: 30%;
+    text-align: center;
+
+    & > div{
+
+    }
+
+    & > h4{
+        margin: 0;
+        margin-top: 1rem;
+    }
+
+    & > p{
+
+    }
+
+    &__img{
+        width: 100%;
+        object-fit: contain;
+    }
+
+    @media only screen and (max-width: $bp-small){
+        width: 90%;
+        margin-bottom: 3.5rem;
+    }
+}
+
+.heading-mid{
+
+    @media only screen and (max-width: $bp-medium){
+        padding-left: 1rem;
+    }
+}

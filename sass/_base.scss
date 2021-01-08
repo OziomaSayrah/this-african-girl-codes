@@ -1,0 +1,46 @@
+:root{
+    //COLOURS
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
+    --facebook-blue: hsl(220, 54%, 55%);
+    --twitter-blue: hsl(203, 89%, 53%);
+    --youtube-red: hsl(0, 100%, 50%);
+    --primary-colour: hsl(87, 49%, 36%);
+    --secondary-colour: hsl(85, 59%, 48%);
+    --primary-font-colour: #222629;
+    --secondary-font-colour: #474B4F;
+    --tertiary-font-colour: #6B6E70;
+
+    //FONTS
+    --font-type: 'Open Sans', 'sans-serif'; 
+}
+
+//RESPONSIVE BREAKPOINTS
+$bp-largest: 75em;    //1200px/16px  => 75
+$bp-large: 62.5em;    //1000px/16px  => 62.5
+$bp-medium: 56.25em;     //900px/16px   => 56.25
+$bp-small: 37.5em;    //600px/16px   =>  37.5
+$bp-smallest: 29.375em;  //470px/16px   => 29.375
+
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; //1rem is equal to 10px
+
+    @media only screen and (max-width: $bp-large){
+        font-size: 50%; //1rem is equal to 8px
+    }
+}
+
+body{
+    font-family: var(--font-type);
+    background-color: var(--primary-colour);
+    padding: 0 1.5rem;
+    
+    @media only screen and (max-width: $bp-medium){
+        width: 100%;  
+    }
+}
